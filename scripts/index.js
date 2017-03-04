@@ -12,6 +12,7 @@ var weatherIconsPlaceholders = document.querySelectorAll("img");
 var breadcrumbCountry = document.querySelector("#breadcrumb-country");
 var breadcrumbRegion = document.querySelector("#breadcrumb-region");
 
+var button = document.querySelector("#getWeather")
 var select = document.querySelector("#city");
 
 var getWeatherData = function(){
@@ -41,5 +42,5 @@ var getWeatherData = function(){
 	xhttp.open("GET", "https://intense-beach-78744.herokuapp.com/?city=" + townName, true);
 	xhttp.send();
 };
-select.onchange = getWeatherData;
+button.onclick = getWeatherData;
 getWeatherData();
