@@ -2,20 +2,69 @@
 <html>
 <head>
 	<title>Weather App</title>
+	<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./styles/style.css">
 </head>
-<body>
-	<select id="city">
-		<option>Vinnitsa</option>
-		<option>Gaisin</option>
-		<option>Odesa</option>
-	</select>
-	<h1 id="cityName"> <img src=""/></h1>
-	<h3 id="time"></h3>
+<body class="container-fluid">
 
-	<h4>Humidity: <span id="humidity"></span></h4>
-	<h4>Temperature: <span id="the_temp"></span></h4>
-	<h4>Weather: <span id="weather_state_name"></span><img src="" id="dsd"/></h4>
-	<h4>Wind speed: <span id="wind_speed"></span></h4>
+	<div class="row">
+		<div class="col-md-12">
+			<select id="city" class="form-control">
+				<option>Vinnitsa</option>
+				<option>Gaisin</option>
+				<option>Odesa</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="row" id="breadcrumb-list">
+		<div class="col-md-12">
+			<ol class="breadcrumb">
+			  <li id="breadcrumb-country">Country</li>
+			  <li id="breadcrumb-region">Region</li>
+			</ol>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4 col-xs-4">
+			<img src="" id="weather-icon"/>
+		</div>
+		<div class="col-md-4 col-xs-4">
+			<h1 id="cityName"></h1>
+		</div>
+		<div class="col-md-4 col-xs-4">
+			<h3 id="time"></h3>
+		</div>
+	</div>
+
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Parameter</th>
+				<th>Value</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Humidity</td>
+				<td><span id="humidity"></span></td>
+			</tr>
+			<tr>
+				<td>Temperature</td>
+				<td><span id="the_temp"></span></td>
+			</tr>
+			<tr>
+				<td>Weather</td>
+				<td><span id="weather_state_name"></span></td>
+			</tr>
+			<tr>
+				<td>Wind speed</td>
+				<td><span id="wind_speed"></span></td>
+			</tr>
+		</tbody>
+	</table>
+
 
 
 	<script type="text/javascript" src="./scripts/index.js"></script>
